@@ -1,0 +1,1 @@
+{"name":"@platforma-open/milaboratories.software-jq:jq-1.7.1","binary":{"type":"binary","registry":"platforma-open","package":"platforma-open/milaboratories.software-jq/1.7.1/1.7.1-{os}-{arch}.tgz","cmd":["{pkg}/bin/jq"],"envVars":[]}}

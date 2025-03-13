@@ -1,0 +1,38 @@
+{
+  "name": "@platforma-open/milaboratories.software-jq",
+  "version": "1.0.0",
+  "description": "JQ software package for Platforma Backend",
+  "scripts": {
+    "build": "true",
+    "pkg:build": "rm -rf dld && ./scripts/build.sh 1.7.1",
+    "pkg:publish": "./scripts/publish.sh 1.7.1",
+    "prepublishOnly": "npm run pkg:build && npm run pkg:publish"
+  },
+  "files": [
+    "dist/"
+  ],
+  "block-software": {
+    "artifacts": {
+      "1.7.1": {
+        "registry": "platforma-open",
+        "version": "1.7.1",
+        "type": "binary",
+        "roots": {
+          "linux-x64": "./dld/jq-1.7.1-linux-x64",
+          "linux-aarch64": "./dld/jq-1.7.1-linux-aarch64",
+          "macosx-x64": "./dld/jq-1.7.1-macosx-x64",
+          "macosx-aarch64": "./dld/jq-1.7.1-macosx-aarch64",
+          "windows-x64": "./dld/jq-1.7.1-windows-x64"
+        }
+      } 
+    },
+    "entrypoints": {
+      "jq":     { "binary": { "artifact": "1.7.1", "cmd": ["{pkg}/bin/jq"] } },
+      "jq-1.7.1":     { "binary": { "artifact": "1.7.1", "cmd": ["{pkg}/bin/jq"] } }
+    }
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@platforma-sdk/package-builder": "^2.15.0"
+  }
+}

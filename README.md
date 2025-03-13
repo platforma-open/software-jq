@@ -1,2 +1,2 @@
 # software-jq
-JQ software packed for Platforma Backend
+SALMON software packed for Platforma Backend
